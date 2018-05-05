@@ -4,13 +4,13 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {space :p:35:p, par l {comp button_decrypt:::p::p, comp button_upload::l:p::p, comp button_encrypt::l:p::p, seq l {space :p:8:p, comp label2:::p::p, space u:::p, comp textField_key2:::p:100:p}, seq l {space :p:6:p, comp label1:::p::p, space u:::p, par l {comp textField_key1:::p:102:p, comp label3:::p::p}}}, space ::105:x}}"
-			"$verticalGroup": "par l {seq l {space :::p, comp label3:::p::p, space :p:8:p, comp button_upload:::p::p, space :p:10:p, par b {comp label1::b:p::p, comp textField_key1::b:p::p}, space u:::p, comp button_encrypt:::p::p, space :p:48:p, par b {comp label2::b:p::p, comp textField_key2::b:p::p}, space u:::p, comp button_decrypt:::p::p, space ::14:x}}"
+			"$horizontalGroup": "par l {seq {space :p:35:p, par l {comp button_decrypt:::p::p, seq l {comp button_browse:::p::p, space :::p, comp fileTextField:::p:101:p}, seq l {space :p:8:p, comp label2:::p::p, space s:::p, comp textField_key2:::p:100:p}, seq l {space :p:6:p, comp label1:::p::p, space s:::p, par l {comp label3:::p::p, comp textField_key1::l:p:102:p}}, comp button_encrypt::l:p::p}, space ::99:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp label3:::p::p, space :p:8:p, par b {comp button_browse::b:p::p, comp fileTextField::b:p::p}, space :p:10:p, par b {comp label1::b:p::p, comp textField_key1::b:p::p}, space u:::p, comp button_encrypt:::p::p, space :p:48:p, par b {comp label2::b:p::p, comp textField_key2::b:p::p}, space u:::p, comp button_decrypt:::p::p, space ::14:x}}"
 		} ) {
 			name: "this"
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button_upload"
-				"text": "upload"
+				name: "button_browse"
+				"text": "browse"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField_key1"
@@ -38,6 +38,9 @@ new FormModel {
 				name: "label3"
 				"text": "Image Cryptography"
 				"font": new java.awt.Font( "Nimbus Sans L", 0, 20 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "fileTextField"
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
